@@ -20,3 +20,9 @@ My bash scripts
    `Usage: dubel files`
 
    Example: `dubel *.jpg`
+
+- qcd.sh
+
+    cd to bookmarks
+    qcd [TAB]: to expand list
+ 

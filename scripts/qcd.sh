@@ -8,7 +8,7 @@ qcd()
             cd ~/Repos/GeminiCli
             ;;
         *)
-            echo "qcd: unkhnow key'$1'"
+            echo "qcd: unknown key'$1'"
             return 1;
             ;;
     esac
