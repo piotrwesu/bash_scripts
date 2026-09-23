@@ -6,4 +6,8 @@ if [ $# -eq 0 ]; then
     exit 1 
 fi
 
-md5sum "$@" | cut -c1-32 | sort | uniq -c | sort -nr | grep -v " 1"
+md5sum "$@" \
+    | awk '{sum[$1]++; names[$1]=names[$1] " " $2} \
+    END {for (key in sum) print sum[key] " " key ":" names[key]}' \
+    | grep -v '^1 ' \
+    | sort -nr
